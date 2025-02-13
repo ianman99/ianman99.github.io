@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .profile-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .section-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .skills span {
+            background: #f0f0f0;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .linkedin-card {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .linkedin-icon {
+            font-size: 40px;
+            color: #0077b5;
+        }
+
+        @media (max-width: 768px) {
+            .profile-card {
+                text-align: left;
+            }
+
+            .info-section {
+                text-align: left;
+            }
+
+            .profile-details {
+                border-left: none !important;
+                /* 모바일에서 테두리 제거 */
+                margin-top: 15px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container mt-4">
+        <!-- Profile Section -->
+        <div class="profile-card row align-items-center">
+            <div class="col-5 col-md-3 text-center">
+                <img src="img/profile-pic.png" class="profile-img" alt="Profile Picture">
+            </div>
+            <div class="col-7 col-md-5">
+                <div class="profile-name">Killian Sven</div>
+                <div class="text-muted">Front-end Designer</div>
+                <div class="text-muted"><i class="fas fa-map-marker-alt"></i> 서울 마포구</div>
+                <button class="btn btn-primary btn-sm mt-2">Contact</button>
+            </div>
+            <div class="col-md-4 row profile-details" style="border-left: 2px solid grey;">
+                <div class="col-6" style="font-size: 14px">
+                    <div>Location</div>
+                    <div>Age</div>
+                    <div>Experience</div>
+                    <div>School</div>
+                </div>
+                <div class="col-6" style="font-size: 14px">
+                    <div>서울 마포구</div>
+                    <div>90년생</div>
+                    <div>신입</div>
+                    <div>천조국대 토목학과</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Profile Navigation -->
+        <div class="mt-3" style="border-bottom: 2px solid grey;">
+            <ul class="nav">
+                <li class="nav-item" style="border-bottom: 2px solid blue; margin-bottom: -2px;">
+                    <a class="nav-link active text-primary" href="#">Profile</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Main Content -->
+        <div class="row mt-3">
+            <!-- Works Section -->
+            <div class="col-md-3">
+                <div class="profile-card">
+                    <div class="section-title">WORKS</div>
+                    <ul class="list-unstyled">
+                        <li>Landing page design</li>
+                        <li>Flyer design</li>
+                        <li>Vue.js To-do app</li>
+                        <li>Shopping page design</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- About Section -->
+            <div class="col-md-6">
+                <div class="profile-card">
+                    <div class="section-title">ABOUT</div>
+                    <p>I am a front-end designer who is excellent at Bootstrap, Sass, Foundation. I have dealt with lots
+                        of in-house design works and outsource things. If you want to check my portfolio, please visit
+                        Killiansven.com</p>
+
+                    <hr>
+                    <div class="section-title">SKILLS</div>
+                    <div class="skills row g-1 text-left">
+                        <div class="col">
+                            <span class="badge bg-light text-dark fs-8 ">HTML5</span>
+                        </div>
+                        <div class="col">
+                            <span class="badge bg-light text-dark fs-8 ">JavaScript</span>
+                        </div>
+                        <div class="col">
+                            <span class="badge bg-light text-dark fs-8 ">CSS3</span>
+                        </div>
+                        <div class="col">
+                            <span class="badge bg-light text-dark fs-8 ">Illustrator</span>
+                        </div>
+                        <div class="col">
+                            <span class="badge bg-light text-dark fs-8">Photoshop</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- People You Might Know Section -->
+            <div class="col-md-3">
+                <div class="linkedin-card" style="font-size:14px">
+                    <i class="fab fa-linkedin linkedin-icon"></i>
+                    <p>Find me at Linkedout.com</p>
+                    <button class="btn btn-primary btn-sm">Sign Up</button>
+                    <p class="text-muted mt-2">Already a member?</p>
+                </div>
+
+                <!-- People You Might Know -->
+                <div class="profile-card mt-3">
+                    <div class="section-title">People You Might Know</div>
+
+                    <!-- Person 1 -->
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="img/profile-pic.png" class="rounded-circle" width="40" height="40" alt="User Profile">
+                        <div class="ms-2">
+                            <div class="fw-bold">Jason Derulo</div>
+                            <div class="text-muted small">Developer</div>
+                            <div class="text-muted small"><i class="fas fa-map-marker-alt"></i> Seoul</div>
+                        </div>
+                    </div>
+
+                    <!-- Person 2 -->
+                    <div class="d-flex align-items-center">
+                        <img src="img/profile-pic.png" class="rounded-circle" width="40" height="40" alt="User Profile">
+                        <div class="ms-2">
+                            <div class="fw-bold">Logan Daul</div>
+                            <div class="text-muted small">Developer</div>
+                            <div class="text-muted small"><i class="fas fa-map-marker-alt"></i> Busan</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
